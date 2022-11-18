@@ -16,7 +16,7 @@ app =Flask(__name__)
 
 @app.route("/hola")
 def inicio():
-    test =os.environ.get("Test")
+    test ="mensaje de saludo"
     return test()
 
 @app.route ("/sms")
@@ -55,7 +55,7 @@ def email():
     subject=asunto,
     html_content=mensaje)
     try:
-        sg = SendGridAPIClient(os.environ.get('SENDGRID_API_KEY'))
+        sg = SendGridAPIClient("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")
         response = sg.send(message)
         print(response.status_code)
         print(response.body)
