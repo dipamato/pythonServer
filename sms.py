@@ -50,7 +50,7 @@ def email():
     mensaje=request.args.get("contenido")
     
     message = Mail(
-    from_email='ejemplo.twilio@gmail.com',
+    from_email='progwebmintic@gmail.com',
     to_emails= destino,
     subject=asunto,
     html_content=mensaje)
